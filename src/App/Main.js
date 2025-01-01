@@ -46,7 +46,7 @@ class Main extends React.Component {
 
     if (this.filterText(event.target.name.value)) {
       let url = process.env.SENDURL + event.target.name.value.trim() + "/" + score + "/" + event.target.world.value
-      fetch(url)
+      await fetch(url)
         .then(res => {
           if(res.statusText==="OK")
             window.alert("submitted")
