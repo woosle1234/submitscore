@@ -39,7 +39,7 @@ class Main extends React.Component {
     return valid
   }
 
-  submitScore = event => {
+  submitScore = async event => {
     event.preventDefault()
 
     var sound = new Audio(filteredSound)
@@ -48,7 +48,7 @@ class Main extends React.Component {
 
     if(this.filterText(event.target.name.value)){
       let url="http://dreamlo.com/lb/UC8EPj95oEGhTuiHeOm-fQ7nGIm4tFCUy-VErC2ZilVA/add/"+event.target.name.value.trim()+"/"+score+"/"+event.target.world.value
-      axios.get(url)
+      let res = await axios.get(url)
       .then(res=>{
         window.alert("submitted")
       })
