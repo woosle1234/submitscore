@@ -52,7 +52,10 @@ class Main extends React.Component {
       })
       console.log(response)
       if(response.ok){
-        window.alert("submitted")
+        if(response.statusText === "OK")
+          window.alert("submitted")
+        else
+          window.alert("Error: "+response.statusText)
       }else{
         window.alert(res.statusText)
       }
