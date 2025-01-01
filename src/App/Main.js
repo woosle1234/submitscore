@@ -51,7 +51,7 @@ class Main extends React.Component {
           if(res.statusText==="OK")
             window.alert("submitted")
           else
-            window.alert("Error")
+            window.alert(res.statusText)
         })
         .catch(err => {
           window.alert(err)
