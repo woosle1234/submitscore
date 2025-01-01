@@ -45,7 +45,7 @@ class Main extends React.Component {
     let score = 1000000000 - parseInt(event.target.time.value)
 
     if (this.filterText(event.target.name.value)) {
-      let url = "http://dreamlo.com/lb/UC8EPj95oEGhTuiHeOm-fQ7nGIm4tFCUy-VErC2ZilVA/add/" + event.target.name.value.trim() + "/" + score + "/" + event.target.world.value
+      let url = process.env.SENDURL + event.target.name.value.trim() + "/" + score + "/" + event.target.world.value
       fetch(url)
         .then(res => {
           if(res.statusText==="OK")
