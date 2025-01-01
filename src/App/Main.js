@@ -37,7 +37,7 @@ class Main extends React.Component {
     return valid
   }
 
-  submitScore = event => {
+  submitScore = async event => {
     event.preventDefault()
 
     var sound = new Audio(filteredSound)
@@ -47,17 +47,15 @@ class Main extends React.Component {
     if (this.filterText(event.target.name.value)) {
       let url = process.env.SENDURL + event.target.name.value.trim() + "/" + score + "/" + event.target.world.value
 
-      fetch(url)
-        .then(res => {
-          console.log(res)
-          if(res.statusText==="OK")
-            window.alert("submitted")
-          else
-            window.alert(res.statusText)
-        })
-        .catch(err => {
-          window.alert(err)
-        })
+      let response = await fetch(url,{
+        method: "GET"
+      })
+      console.log(response)
+      if(response.ok){
+        window.alert("submitted")
+      }else{
+        window.alert(res.statusText)
+      }
 
     } else {
       sound.play()
