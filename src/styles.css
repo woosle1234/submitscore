@@ -1,0 +1,101 @@
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.days {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.eventDivText {
+  position: absolute;
+  z-index: 1000;
+  overflow-wrap: break-word;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+td strong {
+  font-family: Verdana, sans-serif;
+}
+
+.saleImg{
+  height: 100% !important;
+  width: auto !important;
+}
+
+/*-5600px*/
+@keyframes example {
+  from {top:0px}
+  to {top:-5500px}
+}
+
+.listItemTitle{
+  position: relative;
+}
+
+.listItemTitle::after{
+  content: attr(data-text);
+  -webkit-text-stroke: 5px black;
+  color: #844733;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: -1;
+  font-weight: bold;
+}
+
+.listItem1{
+  animation-name: "slideIn1";
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  left:2000px;
+  
+}
+
+.listItem2{
+  animation-name: "slideIn2";
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  right:2000px;
+  
+}
+
+@keyframes slideIn1 {
+  from {left:2000px}
+  to {left:0px}
+}
+
+@keyframes slideIn2 {
+  from {right:2000px}
+  to {right:0px}
+}
+
+.listitembg{
+  -webkit-filter: drop-shadow(0 0 20px lightgreen);
+  filter: drop-shadow(0 0 20px lightgreen);
+}
+
+.vertCenter{
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.calanderMove{
+  animation-name: "calanderAnimation";
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+}
+
+@keyframes calanderAnimation {
+  from {top:50px}
+  to {top:-660px}
+}
