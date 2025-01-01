@@ -46,19 +46,19 @@ class Main extends React.Component {
 
     if (this.filterText(event.target.name.value)) {
       let url = "http://dreamlo.com/lb/UC8EPj95oEGhTuiHeOm-fQ7nGIm4tFCUy-VErC2ZilVA/add/" + event.target.name.value.trim() + "/" + score + "/" + event.target.world.value
-      let response = await fetch(url,{
-        method: "GET"
-      })
-      console.log(response)
-      if(response.ok){
-        if(response.statusText === "OK")
-          window.alert("submitted")
-        else
-          window.alert("Error: "+response.statusText)
-      }else{
-        window.alert(res.statusText)
-      }
-
+      // let response = await fetch(url,{
+      //   method: "GET"
+      // })
+      // console.log(response)
+      // if(response.ok){
+      //   if(response.statusText === "OK")
+      //     window.alert("submitted")
+      //   else
+      //     window.alert("Error: "+response.statusText)
+      // }else{
+      //   window.alert(res.statusText)
+      // }
+      window.open(url)
     } else {
       sound.play()
       window.alert("[Filtered]")
