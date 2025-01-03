@@ -46,19 +46,19 @@ class Main extends React.Component {
 
     if (this.filterText(event.target.name.value)) {
       let dest = parseInt(event.target.world.value)
-      switch(dest){
-        case 0:
-            window.open("http://dreamlo.com/lb/kKT63yVixUGiOTI0c9aFkAlan7aAwN3k-aZuhxpd_PXw/add/" + event.target.name.value.trim().toUpperCase() + "/" + score )
-          break;
-          case 1:
-            window.open("http://dreamlo.com/lb/UC8EPj95oEGhTuiHeOm-fQ7nGIm4tFCUy-VErC2ZilVA/add/" + event.target.name.value.trim().toUpperCase() + "/" + score )
-            break
-            case 2:
-              window.open("http://dreamlo.com/lb/bavd21AUT0Ccv1Av0-DizwK28D1tXH-EWSmlSNi25Iog/add/" + event.target.name.value.trim().toUpperCase() + "/" + score )
-              break
-      }
+      // switch(dest){
+      //   case 0:
+      //       window.open("http://dreamlo.com/lb/kKT63yVixUGiOTI0c9aFkAlan7aAwN3k-aZuhxpd_PXw/add/" + event.target.name.value.trim().toUpperCase() + "/" + score )
+      //     break;
+      //     case 1:
+      //       window.open("http://dreamlo.com/lb/UC8EPj95oEGhTuiHeOm-fQ7nGIm4tFCUy-VErC2ZilVA/add/" + event.target.name.value.trim().toUpperCase() + "/" + score )
+      //       break
+      //       case 2:
+      //         window.open("http://dreamlo.com/lb/bavd21AUT0Ccv1Av0-DizwK28D1tXH-EWSmlSNi25Iog/add/" + event.target.name.value.trim().toUpperCase() + "/" + score )
+      //         break
+      // }
 
-      
+      window.open("http://dreamlo.com/lb/UC8EPj95oEGhTuiHeOm-fQ7nGIm4tFCUy-VErC2ZilVA/add/" + event.target.name.value.trim().toUpperCase() + "/" + score + "/" + event.target.world.value )
       // let response = await fetch(url,{
       //   method: "GET"
       // })
